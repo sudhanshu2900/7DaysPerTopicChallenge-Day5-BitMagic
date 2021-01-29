@@ -1,0 +1,32 @@
+PROBLEM: I/P- N=10               (Binary Representation is 1010)
+         O/P- 2
+         
+         
+         Explain:    1010
+                   & 1001
+                     1000       then      1000
+                                        ^ 1010
+                                          0010    Its 2nd bit
+                                          
+                                          
+         
+SOLUTION:
+
+
+int RMostsetBit(int n){             //To detect rightmost set bit
+    
+    M = (n^(n & (n-1)));
+}
+
+while(M){                            //To count which bit is set
+    int cnt=1;
+    if((M & 1)==0){
+        cnt++;
+        M=(M>>1);
+    }
+    else{
+        return cnt;
+    }
+    
+}
+        
