@@ -1,0 +1,11 @@
+PROBLEM: I/P- N=3 , K=2        (Binary representation is 101)
+         O/P- 7                (Binary representation is 111)
+         
+         
+SOLUTION:
+
+int TurnOnKthBit(int N, int K){
+    int a=1;
+    a=(a<<(k-1));
+    return (N & a);
+}
