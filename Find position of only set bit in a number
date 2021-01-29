@@ -1,0 +1,39 @@
+PROBLEM: I/P- N=4         (Binary representation is 100)
+         O/P- 3
+         
+         I/P- N=8         (Binary representation is 1000)
+         O/P- 4
+         
+         
+         Explain:   100
+                  & 011
+                  -------
+                    000     then      000
+                                    ^ 100
+                                    -------
+                                      100        then in loop it count position no.=>   pos=1  &  M=010
+                                                                                        pos=2  &  M=001
+                                                                                        pos=3  &  M=000    now loop is break bcz (M=000)
+                 So, it gives 3 as a outout                                      
+                                
+                                
+         
+SOLUTION:
+
+int PosOfOnlySetBit(int N){
+    if((n & (n-1))!=0){
+        cout<<"Invalid input";
+        return;
+    }
+    else{
+        int M = (n^(n & (n-1)));
+    }
+    
+    int pos = 0;
+    while (M)                   //If we write [log2(M)+1] instead of this loop then also it give correct output.
+    {
+        M = M >> 1;
+        pos++;
+    }
+    return pos;
+}
