@@ -1,0 +1,25 @@
+Odd parity means Odd number of 1s and Even parity means even number of 1s.
+
+
+PROBLEM: I/P- N=10              (Binary representaton 1010)
+         O/P- Even Parity
+         
+         I/P- N=7               (Binary representaton 0111)
+         O/P- Odd Parity
+         
+         
+         
+SOLUTION:
+
+void ParityCheck(int N){
+    int cnt=0;
+    while(N){
+        if((N & 1)!=0)
+            cnt++;
+        else
+            continue;
+        M=(M>>1);
+    }
+    if((cnt & 1)==0) cout<<"Even Parity";
+    else if((cnt & 1)!=0) cout<<"Odd Parity";
+}
