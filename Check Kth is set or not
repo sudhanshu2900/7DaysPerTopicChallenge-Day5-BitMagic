@@ -1,0 +1,11 @@
+PROBLEM: I/P- N=9, K=4        (Binary Representation is 1001) 
+         O/P- Yes
+         
+         
+SOLUTION:
+
+bool KthSetBit(int N, int K){
+    int a=1;
+    a=(a<<(K-1));
+    return (N & a);
+}
