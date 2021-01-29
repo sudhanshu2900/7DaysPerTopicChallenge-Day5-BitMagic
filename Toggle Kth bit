@@ -1,0 +1,16 @@
+PROBLEM: I/P- N=10, K=4       (Binary Representation is 1010)
+         O/P- 2               (Binary Representation is 0010)
+         
+         I/P- N=9, K=2        (Binary Representation is 1001)
+         O/P- 11              (Binary Representation is 1011)
+         
+         
+         
+         
+SOLUTION:
+
+int ToggleKthBit(int N, int K){
+    int a=1;
+    a=(a<<(K-1));
+    return (N ^ a);
+}    
